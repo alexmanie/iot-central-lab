@@ -1,0 +1,39 @@
+{
+  "id": "dtmi:alexmanie:fakesensor",
+  "@type": [
+    "ModelDefinition",
+    "DeviceModel"
+  ],
+  "displayName": {
+    "en": "Azure IoT Edge Capability Model n18fr33mx6o"
+  },
+  "capabilityModel": 
+  {
+    "@id": "dtmi:zikizto:capabilitymodel:n18fr33mx6o;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:zikizto:capabilitymodel:n18fr33mx6o:SimulatedTemperatureSensor;1",
+        "@type": [
+          "Relationship",
+          "EdgeModule"
+        ],
+        "displayName": {
+          "en": "SimulatedTemperatureSensor"
+        },
+        "maxMultiplicity": 1,
+        "name": "SimulatedTemperatureSensor",
+        "target": [
+          "dtmi:zikizto:SimulatedTemperatureSensor;1"
+        ]
+      }
+    ],
+    "displayName": {
+      "en": "Azure IoT Edge Capability Model n18fr33mx6o"
+    }
+  },
+  "@context": [
+    "dtmi:iotcentral:context;2",
+    "dtmi:dtdl:context;2"
+  ]
+}
