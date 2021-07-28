@@ -1,0 +1,175 @@
+[
+  {
+    "@id": "dtmi:zikizto:capabilitymodel:n18fr33mx6o;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:zikizto:capabilitymodel:n18fr33mx6o:SimulatedTemperatureSensor;1",
+        "@type": [
+          "Relationship",
+          "EdgeModule"
+        ],
+        "displayName": {
+          "en": "SimulatedTemperatureSensor"
+        },
+        "maxMultiplicity": 1,
+        "name": "SimulatedTemperatureSensor",
+        "target": [
+          "dtmi:zikizto:SimulatedTemperatureSensor;1"
+        ]
+      }
+    ],
+    "displayName": {
+      "en": "Azure IoT Edge Capability Model n18fr33mx6o"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:zikizto:SimulatedTemperatureSensor;1",
+    "@type": "Interface",
+    "contents": [],
+    "displayName": {
+      "en": "Module SimulatedTemperatureSensor"
+    },
+    "extends": [
+      "dtmi:zikizto:SimulatedTemperatureSensor:manage;1",
+      "dtmi:storeManager:telemetry;1"
+    ],
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:zikizto:SimulatedTemperatureSensor:manage;1",
+    "@type": [
+      "Interface",
+      "NamedInterface"
+    ],
+    "contents": [
+      {
+        "@id": "dtmi:zikizto:SimulatedTemperatureSensor:manage:SendData;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "SendData"
+        },
+        "name": "SendData",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:zikizto:SimulatedTemperatureSensor:manage:SendInterval;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "SendInterval"
+        },
+        "name": "SendInterval",
+        "schema": "double",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Manage"
+    },
+    "name": "management"
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:storeManager:telemetry;1",
+    "@type": [
+      "Interface",
+      "NamedInterface"
+    ],
+    "contents": [
+      {
+        "@id": "dtmi:storeManager:telemetry:machine;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "machine"
+        },
+        "name": "machine",
+        "schema": {
+          "@id": "dtmi:storeManager:telemetry:machine:schema;1",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:storeManager:telemetry:machine:schema:temperature;1",
+              "displayName": {
+                "en": "temperature"
+              },
+              "name": "temperature",
+              "schema": "double"
+            },
+            {
+              "@id": "dtmi:storeManager:telemetry:machine:schema:pressure;1",
+              "displayName": {
+                "en": "pressure"
+              },
+              "name": "pressure",
+              "schema": "double"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "dtmi:storeManager:telemetry:ambient;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "ambient"
+        },
+        "name": "ambient",
+        "schema": {
+          "@id": "dtmi:storeManager:telemetry:ambient:schema;1",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:storeManager:telemetry:ambient:schema:temperature;1",
+              "displayName": {
+                "en": "temperature"
+              },
+              "name": "temperature",
+              "schema": "double"
+            },
+            {
+              "@id": "dtmi:storeManager:telemetry:ambient:schema:humidity;1",
+              "displayName": {
+                "en": "humidity"
+              },
+              "name": "humidity",
+              "schema": "double"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "dtmi:storeManager:telemetry:timeCreated;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "timeCreated"
+        },
+        "name": "timeCreated",
+        "schema": "dateTime"
+      }
+    ],
+    "displayName": {
+      "en": "Telemetry"
+    },
+    "name": "EnvironmentSensor3i1"
+  }
+]
